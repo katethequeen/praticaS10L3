@@ -1,0 +1,20 @@
+<div class="row row-cols-md-2 row-gap-md-3" *ngIf="product">
+  <div class="col text-center" *ngFor="let p of product">
+    <div class="card">
+      <img [src]="p.thumbnail" class="card-img-top" [alt]="p.title" />
+      <div class="card-body">
+        <h5 class="card-title">{{ p.title }}</h5>
+        <p class="card-title">{{ p.brand }}</p>
+        <p class="card-text">
+          {{ p.description }}
+        </p>
+        <div class="">
+          <button class="btn btn-primary" (click)="addCart(p)">
+            Add to Cart
+          </button>
+          <button class="btn btn-primary ms-2" (click)="like(p)">Liked</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
